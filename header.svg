@@ -1,0 +1,175 @@
+<svg width="854" height="185" viewBox="0 0 854 185" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#2C3333" stroke-width="0.8"/>
+    </pattern>
+
+    <filter id="hex-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="sc-text-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="line-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Typewriter clip regions -->
+    <clipPath id="cp1">
+      <rect x="46" y="55" width="0" height="24">
+        <animate attributeName="width" from="0" to="340" dur="1.6s" begin="0.6s" fill="freeze" calcMode="linear"/>
+      </rect>
+    </clipPath>
+    <clipPath id="cp2">
+      <rect x="46" y="82" width="0" height="24">
+        <animate attributeName="width" from="0" to="340" dur="1.6s" begin="2.6s" fill="freeze" calcMode="linear"/>
+      </rect>
+    </clipPath>
+    <clipPath id="cp3">
+      <rect x="46" y="109" width="0" height="24">
+        <animate attributeName="width" from="0" to="360" dur="1.6s" begin="4.6s" fill="freeze" calcMode="linear"/>
+      </rect>
+    </clipPath>
+
+    <style>
+      @keyframes rain-drop {
+        0%   { transform: translateY(-35px); opacity: 0; }
+        12%  { opacity: 0.45; }
+        85%  { opacity: 0.45; }
+        100% { transform: translateY(220px); opacity: 0; }
+      }
+      @keyframes rain-faint {
+        0%   { transform: translateY(-35px); opacity: 0; }
+        12%  { opacity: 0.2; }
+        85%  { opacity: 0.2; }
+        100% { transform: translateY(220px); opacity: 0; }
+      }
+      @keyframes hex-pulse {
+        0%, 100% { opacity: 0.6;  filter: drop-shadow(0 0 5px #849283); }
+        50%       { opacity: 1.0;  filter: drop-shadow(0 0 14px #849283); }
+      }
+      @keyframes sc-pulse {
+        0%, 100% { opacity: 0.82; }
+        50%       { opacity: 1.0;  }
+      }
+      @keyframes scan-line {
+        0%   { transform: translateY(-2px); opacity: 0.06; }
+        100% { transform: translateY(187px); opacity: 0.06; }
+      }
+      @keyframes cursor-blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes bracket-fade {
+        0%   { opacity: 0; }
+        100% { opacity: 0.55; }
+      }
+    </style>
+
+  </defs>
+
+  <!-- Background fill -->
+  <rect width="854" height="185" fill="#1A1C1C"/>
+
+  <!-- Grid -->
+  <rect width="854" height="185" fill="url(#grid)" opacity="1"/>
+
+  <!-- Scanline sweep -->
+  <rect width="854" height="2" fill="#849283" style="animation: scan-line 7s linear infinite;"/>
+
+  <!-- Rain: 6 drops, spread across canvas -->
+  <line x1="82"  y1="0" x2="82"  y2="24" stroke="#849283" stroke-width="1"   style="animation: rain-drop  3.4s linear -1.2s infinite;"/>
+  <line x1="189" y1="0" x2="189" y2="18" stroke="#849283" stroke-width="0.6" style="animation: rain-faint 4.1s linear -3.0s infinite;"/>
+  <line x1="324" y1="0" x2="324" y2="26" stroke="#849283" stroke-width="0.6" style="animation: rain-faint 3.8s linear -0.6s infinite;"/>
+  <line x1="530" y1="0" x2="530" y2="22" stroke="#849283" stroke-width="1"   style="animation: rain-drop  2.9s linear -2.3s infinite;"/>
+  <line x1="648" y1="0" x2="648" y2="20" stroke="#849283" stroke-width="0.6" style="animation: rain-faint 4.5s linear -1.7s infinite;"/>
+  <line x1="805" y1="0" x2="805" y2="28" stroke="#849283" stroke-width="1"   style="animation: rain-drop  3.6s linear -4.1s infinite;"/>
+
+  <!-- Left corner bracket -->
+  <line x1="18" y1="14"  x2="18"  y2="171" stroke="#849283" stroke-width="0.9" style="animation: bracket-fade 1s ease-out 0.1s both;"/>
+  <line x1="18" y1="14"  x2="40"  y2="14"  stroke="#849283" stroke-width="0.9" style="animation: bracket-fade 1s ease-out 0.1s both;"/>
+  <line x1="18" y1="171" x2="40"  y2="171" stroke="#849283" stroke-width="0.9" style="animation: bracket-fade 1s ease-out 0.1s both;"/>
+
+  <!-- Right corner bracket -->
+  <line x1="836" y1="14"  x2="836" y2="171" stroke="#849283" stroke-width="0.9" style="animation: bracket-fade 1s ease-out 0.1s both;"/>
+  <line x1="814" y1="14"  x2="836" y2="14"  stroke="#849283" stroke-width="0.9" style="animation: bracket-fade 1s ease-out 0.1s both;"/>
+  <line x1="814" y1="171" x2="836" y2="171" stroke="#849283" stroke-width="0.9" style="animation: bracket-fade 1s ease-out 0.1s both;"/>
+
+  <!-- Vertical divider separating text from logo -->
+  <line x1="510" y1="22" x2="510" y2="163" stroke="#2C3333" stroke-width="1.2" opacity="0.9"/>
+  <line x1="510" y1="22" x2="510" y2="163" stroke="#849283" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- Top comment label -->
+  <text x="46" y="38"
+    font-family="'Courier New', Courier, monospace"
+    font-size="9" fill="#849283" opacity="0.38" letter-spacing="3.5">
+    // BOOT SEQUENCE INITIATED
+  </text>
+
+  <!-- Typewriter Line 1 -->
+  <text clip-path="url(#cp1)" x="46" y="73"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13.5" fill="#849283" letter-spacing="1.8">
+    &gt; KERNEL: IRUMKA-SYSTEM-V2
+  </text>
+
+  <!-- Typewriter Line 2 -->
+  <text clip-path="url(#cp2)" x="46" y="100"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13.5" fill="#EAEAEA" letter-spacing="1.8" opacity="0.88">
+    &gt; TARGET: ITMO_STARS_2026
+  </text>
+
+  <!-- Typewriter Line 3 -->
+  <text clip-path="url(#cp3)" x="46" y="127"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13.5" fill="#849283" letter-spacing="1.8">
+    &gt; STATUS: ARCHITECTING_SIMCOM
+  </text>
+
+  <!-- Blinking cursor after all lines render -->
+  <rect x="46" y="138" width="9" height="2" fill="#849283">
+    <animate attributeName="opacity" values="0;0;1;1;0;0" dur="1.1s" begin="6.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- SC LOGO: outer hexagon with glow -->
+  <polygon
+    points="772,92 747,136 697,136 672,92 697,48 747,48"
+    fill="none" stroke="#849283" stroke-width="1.6"
+    style="animation: hex-pulse 3.5s ease-in-out infinite;"
+    filter="url(#hex-glow)"/>
+
+  <!-- SC LOGO: inner hexagon (dimmer fill for depth) -->
+  <polygon
+    points="758,92 739,123 701,123 682,92 701,61 739,61"
+    fill="#1A1C1C" stroke="#849283" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- SC LOGO: inner decorative ring -->
+  <circle cx="722" cy="92" r="26" fill="none" stroke="#849283" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- SC LOGO: main letterform -->
+  <text x="722" y="102"
+    font-family="'Courier New', Courier, monospace"
+    font-size="34" fill="#849283"
+    text-anchor="middle" font-weight="bold"
+    filter="url(#sc-text-glow)"
+    style="animation: sc-pulse 3.5s ease-in-out infinite;">
+    SC
+  </text>
+
+  <!-- SC LOGO: version label -->
+  <text x="722" y="155"
+    font-family="'Courier New', Courier, monospace"
+    font-size="7.5" fill="#849283"
+    text-anchor="middle" opacity="0.45" letter-spacing="2.5">
+    SIMCOM v2.0
+  </text>
+
+  <!-- Bottom rule -->
+  <line x1="46" y1="163" x2="460" y2="163" stroke="#849283" stroke-width="0.4" opacity="0.25"/>
+
+</svg>
