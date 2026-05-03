@@ -46,14 +46,10 @@ SimCom represents a high-fidelity 16-bit CPU emulator built as a complete softwa
 
 ## [ METRICS ]
 
-<div align="center">
-
-<img height="158" src="https://github-readme-stats.vercel.app/api?username=irumka&show_icons=true&count_private=true&include_all_commits=true&title_color=849283&text_color=EAEAEA&bg_color=1A1C1C&icon_color=849283&border_color=4E594A" alt="GitHub Stats"/>
-
-<img height="158" src="https://github-readme-stats.vercel.app/api/top-langs/?username=irumka&layout=compact&langs_count=6&title_color=849283&text_color=EAEAEA&bg_color=1A1C1C&border_color=4E594A" alt="Top Languages"/>
-
-</div>
-
+<p align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=irumka&show_icons=true&count_private=true&include_all_commits=true&title_color=00CCFF&text_color=c9d1d9&bg_color=0D1117&icon_color=00CCFF&border_color=30363D" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=irumka&layout=compact&langs_count=6&title_color=00CCFF&text_color=c9d1d9&bg_color=0D1117&border_color=30363D" />
+</p>
 <div align="center">
 
 <img src="https://streak-stats.demolab.com/?user=irumka&background=1A1C1C&ring=849283&fire=849283&currStreakNum=EAEAEA&sideNums=849283&currStreakLabel=849283&sideLabels=849283&dates=4E594A&border=4E594A" alt="Streak"/>
